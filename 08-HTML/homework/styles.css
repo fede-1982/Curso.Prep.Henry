@@ -1,0 +1,40 @@
+body{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    margin: 0;
+}
+div{
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+    color: #a0a0a0;
+}
+img{
+    width: 400px;
+}
+.container{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #e6e6e6d7;
+    padding: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.thirdDiv{
+    width: 500px;
+    height: 600px;
+    margin: 20px auto;
+    background-color: lightgrey;
+    padding: 50px;
+    border: 1px solid #a0a0a0;
+}
+#spanId{
+    font-size: 18px;
+    margin: 50px;
+}
