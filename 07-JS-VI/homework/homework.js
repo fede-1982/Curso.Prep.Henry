@@ -25,10 +25,12 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
-  let suma = 0;
-  for(var i = 0; i < numeros.length; i++){
-    suma += numeros[i];
-  }
+  // let suma = 0;
+  // for(var i = 0; i < numeros.length; i++){
+  //   suma += numeros[i];
+  // }
+  // return cb(suma);
+  let suma = numeros.reduce((elemento1, elemento2) => elemento1+elemento2);
   return cb(suma);
 }
 
@@ -36,9 +38,10 @@ function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
-  for(var i = 0; i < array.length; i++){
-    cb(array[i]);
-  }
+  // for(var i = 0; i < array.length; i++){
+  //   cb(array[i]);
+  // }
+  array.forEach(elementos => cb(elementos));
 }
 
 function map(array, cb) {
@@ -46,10 +49,12 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
-  var nuevoArray = [];
-  for(var i = 0; i < array.length; i++){
-    nuevoArray.push(cb(array[i]));
-  }
+  // var nuevoArray = [];
+  // for(var i = 0; i < array.length; i++){
+  //   nuevoArray.push(cb(array[i]));
+  // }
+  // return nuevoArray;
+  const nuevoArray = array.map(elemento => cb(elemento));
   return nuevoArray;
 }
 
@@ -57,13 +62,14 @@ function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
-  let nuevoArray = [];
-  for(var i = 0; i < array.length; i++){
-    if (array[i][0].toLowerCase() === "a" ){
-      nuevoArray.push(array[i]);
-    }
-  }
-  return nuevoArray;
+  // let nuevoArray = [];
+  // for(var i = 0; i < array.length; i++){
+  //   if (array[i][0].toLowerCase() === "a" ){
+  //     nuevoArray.push(array[i]);
+  //   }
+  // }
+  // return nuevoArray;
+  return array.filter(elemento => elemento[0].toLowerCase() === "a");
 }
 
 // No modificar nada debajo de esta línea
